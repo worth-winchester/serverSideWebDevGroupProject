@@ -75,10 +75,10 @@ def getID():
                 imdbVotes = "IMDB Votes: " + responseJson["imdbVotes"]
                 imdbID = "IMDB ID: " + responseJson["imdbID"]
                 boxOffice = "BoxOffice: " + responseJson["BoxOffice"]
-                return render_template("searchByTitle.html", dataTitle=title, dataPosterUrl=posterUrl, dataYear=year, dataRated=rated, dataRuntime=runtime, dataGenre=genre, dataDirector=director, dataWriter=writer, dataActors=actors, dataPlot=plot, dataAwards=awards, dataMetascore=metascore, dataImdbRating=imdbRating, dataImdbVotes=imdbVotes, dataImdbID=imdbID, dataBoxOffice=boxOffice, dataPosterText=posterText)
+                return render_template("searchByID.html", dataTitle=title, dataPosterUrl=posterUrl, dataYear=year, dataRated=rated, dataRuntime=runtime, dataGenre=genre, dataDirector=director, dataWriter=writer, dataActors=actors, dataPlot=plot, dataAwards=awards, dataMetascore=metascore, dataImdbRating=imdbRating, dataImdbVotes=imdbVotes, dataImdbID=imdbID, dataBoxOffice=boxOffice, dataPosterText=posterText)
             else:
                 title = "Movie Not Found"
-                return render_template("searchByTitle.html", dataTitle=title)
+                return render_template("searchByID.html", dataTitle=title)
         else:
             return render_template("searchByID.html")
 
