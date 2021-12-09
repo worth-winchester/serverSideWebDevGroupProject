@@ -36,6 +36,7 @@
                 <div class="col">
                 </div>
                 <div class="col mainCol">
+                    <br>
                     <form action=# method="post">
                         <div class="input-group mb-3">
                             <button name="submitButton" value="searchOmdb" class="btn btn-dark" type="submit" id="button-addon1">Search for Movie</button>
@@ -51,7 +52,7 @@
                 </div>
                 <div class="col mainCol">
                     <p id="movieData">{{ dataTitle }}</p>
-                    <a href="{{ dataPosterUrl }}">{{ dataPosterText }}</a>
+                    <p id=movieData><a href="{{ dataPosterUrl }}">{{ dataPosterText }}</a></p>
                     <p id="movieData">{{ dataYear }}</p>
                     <p id="movieData">{{ dataRated }}</p>
                     <p id="movieData">{{ dataRuntime }}</p>
