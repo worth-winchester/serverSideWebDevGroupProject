@@ -45,6 +45,8 @@ def getTitle():
             with open("test.txt", "w") as f:
                 f.write(responseText)
             return render_template("searchByTitle.html", dataTitle=title, dataPosterUrl=posterUrl, dataYear=year, dataRated=rated, dataRuntime=runtime, dataGenre=genre, dataDirector=director, dataWriter=writer, dataActors=actors, dataPlot=plot, dataAwards=awards, dataMetascore=metascore, dataImdbRating=imdbRating, dataImdbVotes=imdbVotes, dataImdbID=imdbID, dataBoxOffice=boxOffice, dataPosterText=posterText)
+        else:
+            return render_template("searchByTitle.html")
 
 @app.route("/movieID", methods=['GET', 'POST'])
 def getID():
@@ -78,6 +80,8 @@ def getID():
             with open("test.txt", "w") as f:
                 f.write(responseText)
             return render_template("searchByID.html", movieData=responseJson)
+        else:
+            return render_template("searchByID.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
